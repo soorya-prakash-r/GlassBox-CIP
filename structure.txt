@@ -1,0 +1,128 @@
+{"comment": "python function level summary"},
+  {
+    "instruction": "Generate a detailed explanation of this function including its inputs, outputs, and behavior.",
+    "function_name": "greet",
+    "language": "python",
+    "decorators": "None",
+    "params": "name",
+    "return_type": "str",
+    "body": ["return \"hello \" + name"],
+    "output": "The greet function always returns the word \"hello \" followed by whatever string you pass in as the name."
+  }
+
+  {"comment": "python function level one-liner"},
+
+  {
+    "instruction": "Generate a one-line intent of this function",
+    "language": "Python",
+    "input": {
+      "function_name": "greet",
+      "decorators": "None",
+      "params": "name",
+      "return_type": "str",
+      "body": ["return \"hello \" + name"]
+    },
+    "output": "The greet function concatenates a greeting prefix with a provided name string and returns the result."
+  }
+
+  {"comment": "java function level summary"},
+
+  {
+    "instruction": "Generate a detailed explanation of this function including its inputs, outputs, and behavior.",
+    "function_name": "calculateInterest",
+    "language": "java",
+    "modifiers": "public static",
+    "params": "principal: double, rate: double, time: int",
+    "return_type": "double",
+    "body": ["return (principal * rate * time) / 100;"],
+    "output": "The calculateInterest function accepts double parameters principal and rate, and an integer parameter time, returning a double representing the simple interest calculated by multiplying the three values and dividing by 100."
+  }
+
+  {"comment": "java function level one-liner"},
+ 
+  {
+    "instruction": "Generate a one-line intent of this function",
+    "language": "java",
+    "function_name": "calculateInterest",
+    "modifiers": "public static",
+    "params": "principal: double, rate: double, time: int",
+    "return_type": "double",
+    "body": ["return (principal * rate * time) / 100;"],
+    "output": "The calculateInterest function computes the simple interest by multiplying the principal, rate, and time and dividing the result by 100."
+  }
+
+  {"comment": "cpp function level summary"},
+
+  {
+    "instruction": "Generate a detailed explanation of this function including its inputs, outputs, and behavior.",
+    "function_name": "calculateArea",
+    "language": "cpp",
+    "modifiers": "constexpr",
+    "params": "radius: double",
+    "return_type": "double",
+    "body": ["return 3.14159 * radius * radius;"],
+    "output": "The calculateArea function is a constexpr method that accepts a double radius and returns the calculated area of a circle as a double, allowing for compile-time evaluation."
+  }
+
+  {"comment": "cpp function level one-liner"},
+
+  {
+    "instruction": "Generate a one-line intent of this function",
+    "language": "cpp",
+    "function_name": "calculateArea",
+    "modifiers": "constexpr",
+    "params": "radius: double",
+    "return_type": "double",
+    "body": ["return 3.14159 * radius * radius;"],
+    "output": "The calculateArea function performs a compile-time calculation of a circle's area based on a provided double radius."
+  }
+
+  {"comment": "c function level summary"},
+
+  {
+    "instruction": "Generate a detailed explanation of this function including its inputs, outputs, and behavior.",
+    "function_name": "allocate_buffer",
+    "language": "c",
+    "modifiers": "static inline",
+    "params": "size: size_t",
+    "return_type": "void*",
+    "body": ["void *ptr = malloc(size);", "if (!ptr) return NULL;", "memset(ptr, 0, size);", "return ptr;"],
+    "output": "The allocate_buffer function is a static inline utility that accepts a size_t parameter size, allocates a memory block of that size using malloc, initializes it to zero with memset, and returns a void pointer to the allocated memory or NULL on failure."
+  }
+
+  {"comment": "c function level one-liner"},
+
+  {
+    "instruction": "Generate a one-line intent of this function",
+    "function_name": "allocate_buffer",
+    "language": "c",
+    "modifiers": "static inline",
+    "params": "size: size_t",
+    "return_type": "void*",
+    "body": ["void *ptr = malloc(size);", "if (!ptr) return NULL;", "memset(ptr, 0, size);", "return ptr;"],
+    "output": "The allocate_buffer function safely allocates and zero-initializes a block of heap memory of a specified size."
+  }
+
+  {"comment": "python class level summary"},
+
+  {
+    "instruction": "Generate a detailed explanation of this class including its attributes, methods, inputs, outputs, and behavior.",
+    "class_name": "DatabaseConnection",
+    "language": "python",
+    "class_decorators": "@singleton",
+    "attributes": {
+      "connection_string": "str",
+      "is_connected": "bool"
+    },
+    "methods": [
+      {
+        "function_name": "connect",
+        "function_description": "Initializes the connection to the database.",
+        "decorators": "None",
+        "params": "self",
+        "return_type": "bool",
+        "body": ["self.is_connected = True", "return True"]
+      }
+    ],
+    "output": "The DatabaseConnection class is a singleton-decorated utility used to manage database lifecycles. It maintains a connection_string and a boolean is_connected status, providing a connect method that establishes the link and returns a success status."
+  }
