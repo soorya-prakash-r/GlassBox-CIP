@@ -228,3 +228,240 @@
     ],
     "output": "The Logger class manages application telemetry by writing data to a persistent file via an internal file stream."
   }
+
+  {"comment": "cpp struct level summary"},
+ 
+  {
+    "instruction": "Generate a detailed explanation of this struct including its members, methods, inputs, outputs, and behavior.",
+    "struct_name": "Vector3D",
+    "language": "cpp",
+    "struct_modifiers": "struct",
+    "members": {
+      "x": "float",
+      "y": "float",
+      "z": "float"
+    },
+    "methods": [
+      {
+        "function_name": "length",
+        "function_description": "Calculates the Euclidean magnitude of the vector.",
+        "modifiers": "const",
+        "params": "None",
+        "return_type": "float",
+        "body": ["return std::sqrt(x*x + y*y + z*z);"]
+      }
+    ],
+    "output": "The Vector3D struct represents a point or direction in 3D space with float members x, y, and z. The length method computes the Euclidean magnitude using the square root of the sum of squared components and returns a float."
+  }
+
+{"comment": "cpp struct level one-liner"},
+
+  {
+    "instruction": "Generate a one-line intent of this struct",
+    "struct_name": "Vector3D",
+    "language": "cpp",
+    "struct_modifiers": "struct",
+    "members": { "x": "float", "y": "float", "z": "float" },
+    "methods": [
+      {
+        "function_name": "length",
+        "function_description": "Calculates the Euclidean magnitude of the vector.",
+        "modifiers": "const",
+        "params": "None",
+        "return_type": "float",
+        "body": ["return std::sqrt(x*x + y*y + z*z);"]
+      }
+    ],
+    "output": "The Vector3D struct represents a point in 3D space and provides a length method to compute its Euclidean magnitude."
+  }
+
+{"comment": "c struct level summary"},
+ 
+  {
+    "instruction": "Generate a detailed explanation of this struct including its attributes, methods, inputs, outputs, and behavior.",
+    "struct_name": "EthernetFrame",
+    "language": "c",
+    "struct_keyword": "typedef struct",
+    "members": { "dest_mac": "uint8_t[6]", "src_mac": "uint8_t[6]", "ethertype": "uint16_t" },
+    "methods": [
+      { "function_name": "Ethernet_is_ipv4", "function_description": "Checks if the frame is an IPv4 packet.", "modifiers": "static", "params": "frame: const EthernetFrame*", "return_type": "bool", "body": ["return frame->ethertype == 0x0800;"] }
+    ],
+    "output": "The EthernetFrame struct represents a standard Layer 2 network header. The Ethernet_is_ipv4 function accepts a pointer to the struct and returns a boolean true if the ethertype member matches the hex value 0x0800."
+  }
+
+{"comment": "c struct level one-liner"},
+
+  {
+    "instruction": "Generate a one-line intent of this struct",
+    "struct_name": "EthernetFrame",
+    "language": "c",
+    "struct_modifiers": "typedef struct",
+    "members": { "dest_mac": "uint8_t[6]", "src_mac": "uint8_t[6]", "ethertype": "uint16_t" },
+    "methods": [
+      { "function_name": "Ethernet_is_ipv4", "function_description": "Checks if the frame is an IPv4 packet.", "modifiers": "static", "params": "frame: const EthernetFrame*", "return_type": "bool", "body": ["return frame->ethertype == 0x0800;"] }
+    ],
+    "output": "The EthernetFrame struct defines a Layer 2 network header with a method to identify IPv4 traffic based on the ethertype member."
+  }
+
+{"comment": "java interface level summary"},
+ 
+  {
+    "instruction": "Generate a detailed explanation of this interface including its constants, abstract methods, default methods, and the contract it enforces.",
+    "interface_name": "Authenticatable",
+    "language": "java",
+    "access_specifier": "public",
+    "constants": { "AUTH_PREFIX": "String" },
+    "methods": [
+      { "function_name": "login", "function_description": "Validates credentials and returns a token.", "modifiers": "abstract", "params": "creds: Credentials", "return_type": "String", "body": [] },
+      { "function_name": "logout", "function_description": "Invalidates the current session.", "modifiers": "default", "params": "token: String", "return_type": "void", "body": ["System.out.println(\"Session ended\");"] }
+    ],
+    "output": "The Authenticatable interface defines the security contract for user sessions. The login method takes a Credentials object and returns a String token, while the default logout method handles session invalidation with a standard logging behavior."
+  }
+
+{"comment": "java interface level one-liner"},
+ 
+  {
+    "instruction": "Generate a one-line intent of this interface",
+    "interface_name": "Authenticatable",
+    "language": "java",
+    "interface_keyword": "interface",
+    "access_specifier": "public",
+    "constants": { "AUTH_PREFIX": "String" },
+    "methods": [
+      { "function_name": "login", "function_description": "Validates credentials and returns a token.", "modifiers": "abstract", "params": "creds: Credentials", "return_type": "String", "body": [] },
+      { "function_name": "logout", "function_description": "Invalidates the current session.", "modifiers": "default", "params": "token: String", "return_type": "void", "body": ["System.out.println(\"Session ended\");"] }
+    ],
+    "output": "The Authenticatable interface defines a security contract for user sessions, requiring a login implementation for token generation and providing a default logout mechanism for session invalidation."
+  }
+
+{"comment": "python enum level summary"},
+ 
+  {
+    "instruction": "Generate a detailed explanation of this enum including its purpose and values.",
+    "language": "python",
+    "entity_type": "enum",
+    "name": "HttpMethod",
+    "base_class": "StrEnum",
+    "members": { "GET": "GET", "POST": "POST", "PUT": "PUT", "DELETE": "DELETE" },
+    "output": "The HttpMethod enum defines the standard set of HTTP request methods used in web communication. It provides string-based members including GET, POST, PUT, and DELETE to ensure type-safe routing and API interaction."
+  }
+
+{"comment": "python enum level one-liner"},
+
+  {
+    "instruction": "Generate a one-line summary of this enum.",
+    "language": "python",
+    "entity_type": "enum",
+    "name": "HttpMethod",
+    "base_class": "StrEnum",
+    "members": { "GET": "GET", "POST": "POST", "PUT": "PUT", "DELETE": "DELETE" },
+    "output": "The HttpMethod enum provides a set of type-safe string constants representing standard RESTful request methods for web service communication."
+  }
+
+  {"comment": "java enum level summary"},
+
+  {
+    "instruction": "Generate a detailed explanation of this enum including its purpose and values.",
+    "language": "java",
+    "entity_type": "enum",
+    "name": "HttpMethod",
+    "members": { "GET": "fetch", "POST": "create", "PUT": "update", "DELETE": "remove" },
+    "output": "The HttpMethod enum defines the standard set of HTTP request methods for web services. It includes constants like GET, POST, PUT, and DELETE to ensure type-safe request handling and API routing within a Java Spring or Jakarta EE environment."
+  }
+
+{"comment": "java enum level one-liner"},
+ 
+  {
+    "instruction": "Generate a one-line summary of this enum.",
+    "language": "java",
+    "entity_type": "enum",
+    "name": "HttpMethod",
+    "members": { "GET": "fetch", "POST": "create", "PUT": "update", "DELETE": "remove" },
+    "output": "The HttpMethod enum defines type-safe constants for standard RESTful request methods to ensure consistent API routing in Java web frameworks."
+  }
+
+ {"comment": "cpp enum level summary"},
+ 
+  {
+    "instruction": "Generate a detailed explanation of this enum including its purpose and values.",
+    "language": "cpp",
+    "entity_type": "enum",
+    "name": "HttpMethod",
+    "enum_type": "enum class",
+    "underlying_type": "uint8_t",
+    "members": { "GET": 0, "POST": 1, "PUT": 2, "DELETE": 3 },
+    "output": "The HttpMethod enum class defines strongly-typed constants for RESTful verbs using an unsigned 8-bit integer underlying type to minimize memory footprint in networking buffers."
+  }
+
+{"comment": "cpp enum level one-liner"},
+
+  {
+    "instruction": "Generate a one-line summary of this enum.",
+    "language": "cpp",
+    "entity_type": "enum",
+    "name": "HttpMethod",
+    "enum_type": "enum class",
+    "underlying_type": "uint8_t",
+    "members": { "GET": 0, "POST": 1, "PUT": 2, "DELETE": 3 },
+    "output": "The HttpMethod enum class defines a memory-efficient set of strongly-typed constants for standard RESTful request methods."
+  }
+
+{"comment": "c enum level summary"},
+
+  {
+    "instruction": "Generate a detailed explanation of this enum including its purpose and values.",
+    "language": "c",
+    "entity_type": "enum",
+    "name": "ErrCode",
+    "members": { "ERR_NONE": 0, "ERR_NOMEM": 1, "ERR_IO": 2, "ERR_INVAL": 3 },
+    "output": "The ErrCode enum defines a set of standard system error identifiers, mapping descriptive names like ERR_NOMEM to integer values to simplify error handling in C logic."
+  }
+
+{"comment": "c enum level one-liner"},
+ 
+  {
+    "instruction": "Generate a one-line summary of this enum.",
+    "language": "c",
+    "entity_type": "enum",
+    "name": "ErrCode",
+    "members": { "ERR_OK": 0, "ERR_GENERIC": 1, "ERR_TIMEOUT": 2, "ERR_NOMEM": 3 },
+    "output": "The ErrCode enum defines a standard set of integer return codes used to signal operation success or specific system-level failures."
+  }
+
+{"comment": "cpp macro level summary"},
+ 
+  {
+    "instruction": "Generate a detailed explanation of this macro.",
+    "language": "cpp",
+    "macro_name": "MAX_BUFFER_SIZE",
+    "macro_content": "#define MAX_BUFFER_SIZE 1024",
+    "output": "The MAX_BUFFER_SIZE macro defines a fixed integer constant of 1024 that the preprocessor substitutes throughout the source code to ensure consistent buffer allocation sizes."
+  }
+
+ {"comment": "c macro level summary"},
+
+  {
+    "instruction": "Generate a detailed explanation of this macro.",
+    "language": "c",
+    "macro_name": "SQUARE",
+    "macro_content": "#define SQUARE(x) ((x) * (x))",
+    "output": "The SQUARE macro computes the square of a given value by multiplying the parameter by itself. It performs textual substitution during preprocessing and uses parentheses to avoid operator precedence issues."
+  }
+
+{"comment": "java generic level summary"},
+ 
+  {
+    "instruction": "Generate a detailed explanation of this generic function.",
+    "language": "java",
+    "entity_type": "generic_function",
+    "name": "swap",
+    "type_parameter": "T",
+    "access_specifier": "public",
+    "modifiers": "static",
+    "params": "a: T[], index1: int, index2: int",
+    "return_type": "void",
+    "body": ["T temp = a[index1];", "a[index1] = a[index2];", "a[index2] = temp;"],
+    "output": "The swap function interchanges two elements at specified indices within an array of a generic type T, utilizing a temporary variable to maintain type safety throughout the operation."
+  }
+
+
