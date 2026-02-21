@@ -464,4 +464,131 @@
     "output": "The swap function interchanges two elements at specified indices within an array of a generic type T, utilizing a temporary variable to maintain type safety throughout the operation."
   }
 
+  {"comment": "java generic level one-liner"},
+ 
+  {
+    "instruction": "Generate a one-line summary of this generic.",
+    "language": "java",
+    "entity_type": "generic_function",
+    "name": "swap",
+    "type_parameter": "T",
+    "access_specifier": "public",
+    "modifiers": "static",
+    "params": "a: T[], index1: int, index2: int",
+    "return_type": "void",
+    "body": ["T temp = a[index1];", "a[index1] = a[index2];", "a[index2] = temp;"],
+    "output": "The swap function interchanges two elements at specified indices within a generic array of type T while maintaining type safety."
+  }
+
+{"comment": "cpp generic level summary"},
+ 
+  {
+    "instruction": "Generate a detailed explanation of this generic function.",
+    "language": "cpp",
+    "entity_type": "generic_function",
+    "name": "swap",
+    "template_parameter": "typename T",
+    "modifiers": "inline",
+    "params": "a: T*, index1: int, index2: int",
+    "return_type": "void",
+    "body": ["T temp = a[index1];", "a[index1] = a[index2];", "a[index2] = temp;"],
+    "output": "The swap function interchanges two elements at specified indices within a raw array of type T, utilizing a temporary object to perform an in-place mutation safely."
+  }
+
+  {"comment": "cpp generic level one-liner"},
+
+  {
+    "instruction": "Generate a one-line summary of this generic.",
+    "language": "cpp",
+    "entity_type": "generic_function",
+    "name": "swap",
+    "template_parameter": "typename T",
+    "modifiers": "inline",
+    "params": "a: T*, index1: int, index2: int",
+    "return_type": "void",
+    "body": ["T temp = a[index1];", "a[index1] = a[index2];", "a[index2] = temp;"],
+    "output": "The swap function interchanges two elements at specified indices within a raw array of type T using a temporary variable."
+  }
+
+  {"comment": "python error block summary"},
+ 
+  {
+    "instruction": "Generate a detailed explanation of this error handling block.",
+    "language": "python",
+    "entity_type": "error_handling",
+    "content": "try:\n    result = 10 / x\nexcept ZeroDivisionError:\n    result = 0",
+    "output": "The ZeroDivisionError block attempts to divide 10 by x and, if x is zero, catches the resulting exception to assign a default value of 0 to result, preventing a runtime crash."
+  }
+
+  {"comment": "python error block one-liner"},
+
+  {
+    "instruction": "Generate a one-liner of this error handling block.",
+    "language": "python",
+    "entity_type": "error_handling",
+    "content": "try:\n    result = 10 / x\nexcept ZeroDivisionError:\n    result = 0",
+    "output": "The ZeroDivisionError block safely attempts a division operation and assigns zero to the result if the divisor is zero to prevent a crash."
+  }
+
+  {"comment": "java error block summary"},
+
+  {
+    "instruction": "Generate a detailed explanation of this error handling block.",
+    "language": "java",
+    "entity_type": "error_handling",
+    "content": "try { int result = 10 / x; } catch (ArithmeticException e) { result = 0; }",
+    "output": "The ArithmeticException block attempts a division operation and catches any mathematical errors, such as division by zero, to assign a default value and prevent a runtime crash."
+  }
+
+  {"comment": "java error block one-liner"},
+
+  {
+    "instruction": "Generate a one-liner of this error handling block.",
+    "language": "java",
+    "entity_type": "error_handling",
+    "content": "try { int result = 10 / x; } catch (ArithmeticException e) { result = 0; }",
+    "output": "The ArithmeticException block catches division by zero or other mathematical errors to assign a default value of zero to the result."
+  }
+
+  {"comment": "cpp error block summary"},
+
+  {
+    "instruction": "Generate a detailed explanation of this error handling block.",
+    "language": "cpp",
+    "entity_type": "error_handling",
+    "content": "try { double res = a / b; } catch (const std::domain_error& e) { res = 0.0; }",
+    "output": "The std::domain_error block catches mathematical operations defined outside of a valid range, such as square roots of negative numbers, to provide a safe fallback value."
+  }
+
+  {"comment": "cpp error block one-liner"},
+ 
+  {
+    "instruction": "Generate a one-liner of this error handling block.",
+    "language": "cpp",
+    "entity_type": "error_handling",
+    "content": "try { double res = a / b; } catch (const std::domain_error& e) { res = 0.0; }",
+    "output": "The std::domain_error block catches mathematical operations defined outside of a valid range to provide a safe fallback value."
+  }
+
+  {"comment": "c error block summary"},
+
+  {
+    "instruction": "Generate a detailed explanation of this error handling pattern.",
+    "language": "c",
+    "entity_type": "error_handling",
+    "content": "if (ptr == NULL) { return ENOMEM; }",
+    "output": "The null_pointer_check block validates that a memory allocation was successful before proceeding, returning a standard POSIX error code if the pointer is null."
+  }
+
+
+  {"comment": "c error block one-liner"},
+
+  {
+    "instruction": "Generate a one-liner of this error handling block.",
+    "language": "c",
+    "entity_type": "error_handling",
+    "content": "if (ptr == NULL) { return ENOMEM; }",
+    "output": "The null_pointer_check block validates memory allocation and returns a standard out-of-memory error code to the caller."
+  }
+
 
