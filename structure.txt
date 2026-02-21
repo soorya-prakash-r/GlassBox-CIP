@@ -126,3 +126,105 @@
     ],
     "output": "The DatabaseConnection class is a singleton-decorated utility used to manage database lifecycles. It maintains a connection_string and a boolean is_connected status, providing a connect method that establishes the link and returns a success status."
   }
+
+{"comment": "python class level one-liner"},
+
+  {
+    "instruction": "Generate a one-line intent of this class",
+    "class_name": "DatabaseConnection",
+    "language": "python",
+    "class_decorators": "@singleton",
+    "attributes": { "connection_string": "str", "is_connected": "bool" },
+    "methods": [{ "function_name": "connect", "function_description": "Initializes the connection.", "decorators": "None", "params": "self", "return_type": "bool", "body": ["self.is_connected = True", "return True"] }],
+    "output": "The DatabaseConnection class ensures a single persistent link to a database by managing connection states and initialization logic."
+  },
+
+{"comment": "java class level summary"},
+
+  {
+    "instruction": "Generate a detailed explanation of this class including its attributes, methods, inputs, outputs, and behavior.",
+    "class_name": "UserAccountController",
+    "language": "java",
+    "class_modifiers": "public",
+    "annotations": ["@RestController", "@RequestMapping(\"/users\")"],
+    "attributes": { "userService": "UserService" },
+    "methods": [{
+      "function_name": "findById",
+      "function_description": "Retrieves a user profile by the primary key.",
+      "modifiers": "public",
+      "params": "id: Long",
+      "return_type": "ResponseEntity<User>",
+      "body": ["return ResponseEntity.ok(userService.getUser(id));"]
+    }],
+    "output": "The UserAccountController class handles incoming web requests for user management. The findById method takes a Long id as input and returns a ResponseEntity containing the user object and an HTTP 200 status."
+  }
+
+{"comment": "java class level one-liner"},
+
+  {
+    "instruction": "Generate a one-line intent of this class",
+    "class_name": "UserAccountController",
+    "language": "java",
+    "class_modifiers": "public",
+    "annotations": ["@RestController", "@RequestMapping(\"/users\")"],
+    "attributes": { "userService": "UserService" },
+    "methods": [{
+      "function_name": "findById",
+      "function_description": "Retrieves a user profile by the primary key.",
+      "modifiers": "public",
+      "params": "id: Long",
+      "return_type": "ResponseEntity<User>",
+      "body": ["return ResponseEntity.ok(userService.getUser(id));"]
+    }],
+    "output": "The UserAccountController class provides RESTful endpoints to manage user data by interfacing with the internal user service layer."
+  }
+
+{"comment": "cpp class level summary"},
+ 
+  {
+    "instruction": "Generate a detailed explanation of this class including its attributes, methods, inputs, outputs, and behavior.",
+    "class_name": "Logger",
+    "language": "cpp",
+    "class_modifiers": "class",
+    "access_specifier": "public",
+    "attributes": {
+      "logFile": "std::ofstream"
+    },
+    "methods": [
+      {
+        "function_name": "log",
+        "function_description": "Writes a message to the associated log file with a timestamp.",
+        "access_specifier": "public",
+        "modifiers": "void",
+        "params": "message: std::string",
+        "return_type": "void",
+        "body": ["logFile << message << std::endl;"]
+      }
+    ],
+    "output": "The Logger class manages application telemetry by writing data to a persistent file. The log method accepts a string message and appends it to the internal file stream, returning no value."
+  }
+
+{"comment": "cpp class level one-liner"},
+ 
+  {
+    "instruction": "Generate a one-line intent of this class",
+    "class_name": "Logger",
+    "language": "cpp",
+    "class_modifiers": "class",
+    "access_specifier": "public",
+    "attributes": {
+      "logFile": "std::ofstream"
+    },
+    "methods": [
+      {
+        "function_name": "log",
+        "function_description": "Writes a message to the associated log file with a timestamp.",
+        "access_specifier": "public",
+        "modifiers": "void",
+        "params": "message: std::string",
+        "return_type": "void",
+        "body": ["logFile << message << std::endl;"]
+      }
+    ],
+    "output": "The Logger class manages application telemetry by writing data to a persistent file via an internal file stream."
+  }
